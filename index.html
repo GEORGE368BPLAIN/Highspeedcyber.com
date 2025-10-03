@@ -1,0 +1,329 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HI SPEED Computer Services & Cyber — Fast printing, government portals, web design, and IT support in Kenya.">
+  <meta name="theme-color" content="#0a3d62">
+  <title>HI SPEED Computer Services & Cyber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo.jpg">
+  <script defer src="https://unpkg.com/feather-icons"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/quote.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="index.html"><img src="assets/img/logo.jpg" alt="HI SPEED Computer Services & Cyber logo"></a>
+    <nav class="menu" id="main-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="payments.html">Payments</a>
+      <a href="order.html">Order Print</a>
+      <a href="booking.html">Book a Service</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-outline" href="faq.html">FAQ</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Print. Scan. Apply. Pay. <span class="accent">Go.</span></h1>
+<p class="slogan">Your trusted online services</p>
+<div class="quote-banner"><span id="promoQuotes" aria-live="polite"></span></div>
+        <p>From instant prints to government portals—get it done fast with <strong>HI SPEED Computer Services & Cyber</strong>.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="order.html"><i data-feather="printer"></i> Order Print</a>
+          <a class="btn btn-light" href="https://wa.me/254700592619" target="_blank"><i data-feather="send"></i> WhatsApp Us</a>
+        </div>
+        <div class="trust counters">
+  <div class="counter" data-count="10000"><strong><span class="count">0</span>+</strong><small> documents printed</small></div>
+  <div class="counter" data-count="1"><strong><span class="count">0</span>‑day</strong><small> portal assistance</small></div>
+  <div class="counter" data-count="100"><strong><span class="count">0</span>%</strong><small> secure payments</small></div>
+</div>
+      </div>
+      <div class="hero-card">
+        <div class="speedometer"></div>
+        <ul class="quick-services">
+          <li><i data-feather="camera"></i> Passport Photos</li>
+          <li><i data-feather="file-text"></i> KRA/ITAX Returns</li>
+          <li><i data-feather="clipboard"></i> Good Conduct</li>
+          <li><i data-feather="globe"></i> eCitizen Logins</li>
+          <li><i data-feather="type"></i> Typing & Formatting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="tiles">
+    <div class="container">
+      <h2>What do you need today?</h2>
+<div class="searchbar"><input id="serviceSearch" type="search" placeholder="Search services (e.g., KRA, passport, binding, web)..."></div>
+      <div class="grid-6">
+        <a class="tile" data-tags="print, scan, copy, documents, binding, a4, a3" href="services.html#documents">
+          <i data-feather="copy"></i>
+          <h3>Print • Scan • Copy</h3>
+          <p>Fast, crisp documents, A4/A3, binding & more.</p>
+        </a>
+        <a class="tile" data-tags="government, ecitizen, kra, ntsa, helb, nssf, nhif, crb, county, passport, good conduct" href="services.html#government">
+          <i data-feather="award"></i>
+          <h3>Government Portals</h3>
+          <p>eCitizen, KRA, NTSA, HELB, NSSF, NHIF, CRB.</p>
+        </a>
+        <a class="tile" data-tags="design, logo, posters, banners, branding, business cards" href="services.html#design">
+          <i data-feather="pen-tool"></i>
+          <h3>Design & Branding</h3>
+          <p>Logos, posters, banners, business cards.</p>
+        </a>
+        <a class="tile" data-tags="web, website, hosting, seo, social media, digital" href="services.html#web">
+          <i data-feather="monitor"></i>
+          <h3>Web & Digital</h3>
+          <p>Websites, hosting, SEO, social pages.</p>
+        </a>
+        <a class="tile" data-tags="it, support, os, antivirus, network, printer, router, wifi" href="services.html#it">
+          <i data-feather="cpu"></i>
+          <h3>IT Support</h3>
+          <p>OS installs, antivirus, networks & printers.</p>
+        </a>
+        <a class="tile" data-tags="computer packages, training, excel, powerpoint, word, google" href="services.html#packages">
+          <i data-feather="book-open"></i>
+          <h3>Computer Packages</h3>
+          <p>Beginner to advanced modules & certification.</p>
+        </a>
+      </div>
+    </div>
+  
+</section>
+
+<section class="quick-order">
+  <div class="container quick-order-inner card">
+    <h3>Quick Order — Instant Estimate</h3>
+    <form onsubmit="return handleQuickEstimate(event)" class="quick-form">
+      <div class="q-grid">
+        <label>Color
+          <select id="qColor">
+            <option value="bw">Black & White</option>
+            <option value="color">Color</option>
+          </select>
+        </label>
+        <label>Size
+          <select id="qSize">
+            <option value="A4">A4</option>
+            <option value="A3">A3</option>
+          </select>
+        </label>
+        <label>Pages
+          <input type="number" id="qPages" min="1" value="1">
+        </label>
+        <label>Copies
+          <input type="number" id="qCopies" min="1" value="1">
+        </label>
+        <label>Binding
+          <select id="qBinding">
+            <option value="none">None</option>
+            <option value="spiral">Spiral</option>
+            <option value="wire">Wire</option>
+          </select>
+        </label>
+      </div>
+      <div class="q-actions">
+        <button class="btn btn-primary" type="submit"><i data-feather="zap"></i> Get Estimate</button>
+        <a class="btn btn-light" href="order.html"><i data-feather="printer"></i> Full Order</a>
+      </div>
+      <p id="qResult" class="muted"></p>
+    </form>
+  </div>
+</section>
+
+<section class="cta-strip">
+
+    <div class="container strip-inner">
+      <h3>Ready to print or apply now?</h3>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="order.html"><i data-feather="upload"></i> Upload & Order</a>
+        <a class="btn btn-outline" href="booking.html"><i data-feather="calendar"></i> Book a Slot</a>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="container section about-home">
+    <div class="grid-2">
+      <div>
+        <h2>About High‑Speed Cyber</h2>
+        <p><strong>HI SPEED Computer Services & Cyber</strong> provides fast, reliable online and in‑shop services — from instant printing and passport photos to government portals, tax, web design, and IT support. We blend speed with accuracy so you can <em>print, apply, and go</em> without delays.</p>
+        <ul class="bullets">
+          <li>Same‑day assistance on eCitizen, KRA, NTSA, HELB, SHA, NSSF/NHIF</li>
+          <li>Professional document finishing: binding, laminating, photo editing</li>
+          <li>Web & digital: websites, hosting, SEO, social setup</li>
+          <li>Computer packages training — beginner to advanced</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Why Our Customers Choose Us</h3>
+        <ul class="bullets">
+          <li>Fast turnaround with clear pricing</li>
+          <li>Secure handling of personal data</li>
+          <li>Friendly support on WhatsApp and in‑shop</li>
+          <li>Convenient location at Ritamart Building 1, Ikinu</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="achievements">
+  <div class="container">
+    <h2>Highspeed Cyber — Achievements</h2>
+    <p class="muted">A few milestones we’re proud of. (Editable — update the numbers anytime.)</p>
+    <div class="achieve-grid">
+      <div class="achieve-card">
+        <i data-feather="file-text"></i>
+        <div class="counter" data-count="10000"><strong><span class="count">0</span>+</strong></div>
+        <p>Documents printed</p>
+      </div>
+      <div class="achieve-card">
+        <i data-feather="award"></i>
+        <div class="counter" data-count="2500"><strong><span class="count">0</span>+</strong></div>
+        <p>Same‑day portal assists</p>
+      </div>
+      <div class="achieve-card">
+        <i data-feather="star"></i>
+        <div class="counter" data-count="350"><strong><span class="count">0</span>+</strong></div>
+        <p>5‑star reviews</p>
+      </div>
+      <div class="achieve-card">
+        <i data-feather="zap"></i>
+        <div class="counter" data-count="15"><strong><span class="count">0</span></strong></div>
+        <p>Avg. turnaround (mins) for quick print</p>
+      </div>
+      <div class="achieve-card">
+        <i data-feather="calendar"></i>
+        <div class="counter" data-count="5"><strong><span class="count">0</span>+</strong></div>
+        <p>Years serving the community</p>
+      </div>
+      <div class="achieve-card">
+        <i data-feather="users"></i>
+        <div class="counter" data-count="60"><strong><span class="count">0</span>%</strong></div>
+        <p>Repeat customers</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="testimonials">
+  <div class="container">
+    <h2>Trusted by students, businesses & professionals</h2>
+    <div class="carousel" id="testimonialCarousel" aria-live="polite">
+      <figure class="slide active">
+        <blockquote>“Quick and professional. I filed my KRA returns in minutes.”</blockquote>
+        <figcaption>— Brian K.</figcaption>
+      </figure>
+      <figure class="slide">
+        <blockquote>“Great prices for bulk printing and binding. Highly recommend.”</blockquote>
+        <figcaption>— Mercy A.</figcaption>
+      </figure>
+      <figure class="slide">
+        <blockquote>“They handled my passport application photos and forms perfectly.”</blockquote>
+        <figcaption>— Kevin N.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+  <section class="map-hours">
+    <div class="container grid-2">
+      <div>
+        <h3>Visit Us</h3>
+        <div class="map-embed">
+          <iframe title="Google Map" src="https://maps.google.com/maps?q=Ikinu%20Ritamart%20Building%201%20Kenya&t=&z=17&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div>
+        <h3>Working Hours</h3>
+        <ul class="hours">
+          <li><span>Mon–Fri</span><span>7:30am – 8:00pm</span></li>
+          <li><span>Saturday</span><span>8:00am – 7:00pm</span></li>
+          <li><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <a class="btn btn-light" href="contact.html"><i data-feather="phone"></i> Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+<div class="quick-actions">
+  <a class="qa" href="order.html" title="Order Print"><i data-feather="printer"></i></a>
+  <a class="qa" href="payments.html" title="Payments"><i data-feather="credit-card"></i></a>
+  <a class="qa" href="services.html#government" title="Government Portals"><i data-feather="award"></i></a>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container grid-4">
+    <div>
+      <h4>HI SPEED Cyber</h4>
+      <p>Fast. Reliable. Professional.<br>Print • Scan • Apply • Pay • Go.<br><em>Your trusted online services</em><br><small><strong>Location:</strong> Ikinu town, opposite the main stage — Ritamart Building 1</small></p>
+      <p><strong>Open:</strong> Mon–Sat 7:30am–8:00pm</p>
+      <div class="pay-icons">
+        <span class="badge">M-Pesa Till 819589</span>
+        <span class="badge">Visa</span>
+        <span class="badge">Mastercard</span>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="linklist">
+        <li><a href="pricing.html">Pricing</a>
+      <a href="payments.html">Payments</a></li>
+        <li><a href="order.html">Order Print</a></li>
+        <li><a href="services.html#government">Government & Portals</a></li>
+        <li><a href="services.html#design">Design & Branding</a></li>
+        <li><a href="services.html#it">IT Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul class="linklist">
+        <li><a href="https://wa.me/254700592619" target="_blank">WhatsApp Us</a></li>
+        <li><a href="tel:+254700592619">Call: +254 700 592 619</a></li>
+        <li><a href="mailto:georgekahugunjogu@gmail.com">georgekahugunjogu@gmail.com</a></li>
+        <li><a href="https://maps.google.com/?q=HI+SPEED+Cyber" target="_blank">Find us on Google Maps</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul class="linklist">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="refunds.html">Refund Policy</a></li>
+      </ul>
+      <p class="tiny">© 2025-10-03 HI SPEED Computer Services & Cyber. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-whatsapp">
+  <a href="https://wa.me/254700592619?text=Hello%21+I%27d+like+help+with+a+service+today." target="_blank" aria-label="Chat on WhatsApp">
+    <i data-feather="message-circle"></i>
+  </a>
+</div>
+<script>feather.replace();</script>
+</body>
+</html>

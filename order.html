@@ -1,0 +1,169 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HI SPEED Computer Services & Cyber — Fast printing, government portals, web design, and IT support in Kenya.">
+  <meta name="theme-color" content="#0a3d62">
+  <title>HI SPEED Computer Services & Cyber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo.jpg">
+  <script defer src="https://unpkg.com/feather-icons"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="index.html"><img src="assets/img/logo.jpg" alt="HI SPEED Computer Services & Cyber logo"></a>
+    <nav class="menu" id="main-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="payments.html">Payments</a>
+      <a href="order.html">Order Print</a>
+      <a href="booking.html">Book a Service</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-outline" href="faq.html">FAQ</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
+</header>
+
+<main class="page">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Order Print</h1>
+      <p>Upload files, choose options, pay, and pick up with your order code.</p>
+    </div>
+  </section>
+  <section class="container section">
+    <form class="card form" onsubmit="return handleOrderSubmit(event)">
+      <div class="grid-3">
+        <div class="field">
+          <label>Upload Files (PDF/Docx/Image)</label>
+          <input type="file" id="files" multiple required>
+        </div>
+        <div class="field">
+          <label>Color</label>
+          <select id="color">
+            <option value="bw">Black & White</option>
+            <option value="color">Color</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Paper Size</label>
+          <select id="size">
+            <option value="A4">A4</option>
+            <option value="A3">A3</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Copies</label>
+          <input type="number" id="copies" min="1" value="1">
+        </div>
+        <div class="field">
+          <label>Binding</label>
+          <select id="binding">
+            <option value="none">None</option>
+            <option value="spiral">Spiral</option>
+            <option value="wire">Wire</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Pickup Time</label>
+          <input type="time" id="pickup">
+        </div>
+        <div class="field span-3">
+          <label>Notes</label>
+          <textarea id="notes" rows="3" placeholder="Any special instructions?"></textarea>
+        </div>
+        <div class="field span-3">
+          <label>Upload Proof of Payment (image/PDF)</label>
+          <input type="file" id="proof" accept="image/*,application/pdf" multiple>
+          <p class="tiny muted">Optional: attach M‑Pesa receipt screenshot or PDF if you paid manually.</p>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary"><i data-feather="credit-card"></i> Pay & Place Order</button>
+        <a class="btn btn-light" href="https://wa.me/254700592619" target="_blank"><i data-feather="message-square"></i> Ask on WhatsApp</a>
+      </div>
+      <p class="tiny muted">Payments simulate M‑Pesa STK for demo. Connect Daraja API on the backend to go live.</p>
+    </form>
+    
+    <div class="card" style="margin-top:1rem">
+      <h3>Manual Payment — M‑Pesa Till 819589</h3>
+      <ol>
+        <li>Open <strong>M‑Pesa</strong> app or dial <strong>*334#</strong>.</li>
+        <li>Select <strong>Lipa na M‑PESA</strong> → <strong>Buy Goods and Services</strong>.</li>
+        <li>Enter <strong>Till Number: 819589</strong>.</li>
+        <li>Enter the <strong>Amount</strong> shown in your order summary.</li>
+        <li>Pay and keep the <strong>confirmation message</strong>.</li>
+        <li>Send the confirmation to WhatsApp <a href="https://wa.me/254700592619" target="_blank">+254 700 592 619</a> with your <strong>Order ID</strong>.</li>
+      </ol>
+      <p class="tiny muted">Note: This is a manual payment method for customers. We will verify and start your job.</p>
+    </div>
+    
+    <div id="order-result" class="order-result" aria-live="polite"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container grid-4">
+    <div>
+      <h4>HI SPEED Cyber</h4>
+      <p>Fast. Reliable. Professional.<br>Print • Scan • Apply • Pay • Go.<br><em>Your trusted online services</em><br><small><strong>Location:</strong> Ikinu town, opposite the main stage — Ritamart Building 1</small></p>
+      <p><strong>Open:</strong> Mon–Sat 7:30am–8:00pm</p>
+      <div class="pay-icons">
+        <span class="badge">M-Pesa Till 819589</span>
+        <span class="badge">Visa</span>
+        <span class="badge">Mastercard</span>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="linklist">
+        <li><a href="pricing.html">Pricing</a>
+      <a href="payments.html">Payments</a></li>
+        <li><a href="order.html">Order Print</a></li>
+        <li><a href="services.html#government">Government & Portals</a></li>
+        <li><a href="services.html#design">Design & Branding</a></li>
+        <li><a href="services.html#it">IT Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul class="linklist">
+        <li><a href="https://wa.me/254700592619" target="_blank">WhatsApp Us</a></li>
+        <li><a href="tel:+254700592619">Call: +254 700 592 619</a></li>
+        <li><a href="mailto:georgekahugunjogu@gmail.com">georgekahugunjogu@gmail.com</a></li>
+        <li><a href="https://maps.google.com/?q=HI+SPEED+Cyber" target="_blank">Find us on Google Maps</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul class="linklist">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="refunds.html">Refund Policy</a></li>
+      </ul>
+      <p class="tiny">© 2025-10-03 HI SPEED Computer Services & Cyber. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-whatsapp">
+  <a href="https://wa.me/254700592619?text=Hello%21+I%27d+like+help+with+a+service+today." target="_blank" aria-label="Chat on WhatsApp">
+    <i data-feather="message-circle"></i>
+  </a>
+</div>
+<script>feather.replace();</script>
+</body>
+</html>
